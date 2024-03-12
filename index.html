@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <title>Currency Converter</title>
+</head>
+<body>
+
+    <div class="parent">
+        <p class="txt">Currency Converter</p>
+
+        <form id="form-cont">
+            <label for="amt">Amount</label><br>
+            <input type="number"  name="amt" id="amount"><br><br><br>
+
+            <label for="from">From</label><br>
+            <div class="select-wrapper">
+            <select name="from" id="" class="from">
+                <option value="USD" class="usa">USD - US Dollar</option>
+                <option value="NGN" class="nig">NGN - Naira</option>
+                <option value="GHS">GHC - Ghana</option>
+            </select></div>
+
+            <div class="arr-cont">
+                <span>&darr;&uarr;</span> 
+            </div>
+
+            <label for="to">To</label><br>
+            
+            <div class="to-wrapper">
+            <select name="to" id="mySelect" class="to">
+                <option value="GHS">GHC - Ghana</option>
+                <option value="NGN">NGN - Naira</option>
+                <option value="USD">USD - US Dollar</option>
+               
+            </select><br> </div>
+
+            <button type="button" id="butn">Convert Now</button>
+
+        </form>
+      
+        <div class="shape">
+          <div class="show"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>

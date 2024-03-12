@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 910px;
+    height: 67vh;
+    margin: 180px auto;
+    box-shadow: 2px 2px 50px 1px black;   
+    background-image: linear-gradient(to right, #DD5D30, #EC5E6E);
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+.shape {
+    position: relative;
+   
+
+}
+.shape:after {
+    position: absolute;
+    content: '';
+    height: 0px;
+    width: 0px;
+    left: -147px;
+    top: 1px;
+    border-radius: 10px;
+    border-width: 330px 285px;
+    border-style: solid;
+    border-color:#191B1A #191B1A transparent transparent;
+}
+
+.txt{
+    color: white;
+    padding-top: 30px;
+    margin-left:    40px;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#form-cont{
+    margin-top: 150px;
+    margin-left: -190px;
+}
+
+label{
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+
+input{
+    margin-top: 13px;
+    width: 320px;
+    height: 4vh;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select{
+   
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+   
+}
+
+
+
+
+
+.select-wrapper {
+    width: 340px;
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+  
+  }
+  
+  .select-wrapper select{
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    appearance: none;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    
+  }
+  
+
+  .select-wrapper::after {
+    content: '\25BC'; 
+    position: absolute;
+    top: calc(50% - 0.5em);
+    right: 10px;
+    pointer-events: none;
+  }
+  
+
+
+
+
+.arr-cont{
+    background-color:#191B1A;
+    color: white;
+    font-size: 25px;
+    border-radius: 50%;
+    width: 25px;
+    height:25px;
+   padding: 9px;
+   margin-left: 350px;
+   margin-top: 10px;
+}
+.to{
+    margin-top: 13px;
+    width: 340px;
+    height: 4vh;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+
+button{
+    width: 335px;
+    height: 4vh;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #191B1A;
+    color: white;
+    margin-top: 53px;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.show {
+    position: absolute;
+    top: 10%; 
+    margin-left: 200px; 
+ 
+    z-index: 1;
+    color: white;
+    font-size: 40px;
+}
+.to-wrapper select{
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    appearance: none;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    
+  }
+
+  .to-wrapper {
+    width: 340px;
+    position: relative;
+    
+  }
+  .to-wrapper::after {
+    content: '\25BC'; 
+    position: absolute;
+    top: calc(60% - 0.5em);
+    right: 10px;
+    pointer-events: none;
+  }
+  
