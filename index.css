@@ -168,12 +168,47 @@ button{
 .show {
     position: absolute;
     top: 10%; 
-    margin-left: 200px; 
- 
+    margin-left: 150px; 
     z-index: 1;
     color: white;
     font-size: 40px;
 }
+.show img{
+  width: 200px;
+}
+.err{
+  font-family: "Montserrat", sans-serif;
+  display: none;
+}
+
+
+
+
+.converted {
+  position: absolute;
+  top: 50%; 
+  margin-left: 200px; 
+  z-index: 1;
+  color: white;
+  font-size: 32px;
+}
+
+.popOut {
+  position: absolute;
+  top: 45%; 
+  margin-left: 220px; 
+  z-index: 1;
+  color: rgb(252, 249, 249);
+  background-color: rgb(34, 31, 31);
+  font-size: 40px;
+  width: auto;
+  height: auto;
+  display: none;
+  text-align: center;
+  padding: 50px;
+  border-radius: 12px;
+}
+
 .to-wrapper select{
     width: 100%;
     padding: 10px;
