@@ -164,11 +164,44 @@ const currencySymbols = {
   
 
 };
+
+
 let pop = document.querySelector(".popOut");
 let parent = document.querySelector(".parent");
 let error = document.querySelector(".err");
 let shp = document.querySelector(".shape");
 let txt = document.querySelector(".txt");
+
+
+
+const cancelSymbol = "\u00D7"; 
+
+
+
+function createCancelButton() {
+    const cancelButton = document.createElement('button');
+    cancelButton.innerHTML =`<span style="font-size: 40px;">${cancelSymbol}</span>`;;
+    cancelButton.classList.add('cancel-button');
+    cancelButton.style.width = "20px";
+   
+    
+    return cancelButton;
+}
+
+
+pop.addEventListener("click", (event) => {
+    if (event.target.classList.contains('cancel-button')) {
+       
+        pop.style.display = "none";
+        
+        formbox.style.filter = "none";
+        shp.style.filter = "none";
+        txt.style.filter = "none";
+    }
+});
+
+
+
 
 
 btn.addEventListener("click", async (e) => {
@@ -188,10 +221,11 @@ btn.addEventListener("click", async (e) => {
       // displayAmt.textContent =  fromSymbol + value;  
 
       pop.style.display = "block";
-      formbox.style.filter = "blur(3px)";
       error.style.display = "none";
-      shp.style.filter = "blur(3px)";
-      txt.style.filter = "blur(3px)";
+    //   formbox.style.filter = "blur(3px)";
+    
+    //   shp.style.filter = "blur(3px)";
+    //   txt.style.filter = "blur(3px)";
     }
   
     
@@ -213,17 +247,26 @@ btn.addEventListener("click", async (e) => {
 
         try {
             const response = await axios.request(options);
+            
+          
             const convertedAmount = response.data.result.convertedAmount;
+          
+         
+            
+            
               
             
             if (typeof convertedAmount === "number" && /\./.test(convertedAmount.toString())) {
-            let roundedAmount = convertedAmount.toFixed(5);
+                
+            let roundedAmount = convertedAmount.toFixed(3);
              pop.textContent = `${toSymbol}${roundedAmount}`;
+            
             }
              else{
               pop.textContent = `${toSymbol}${convertedAmount}`;
+              
              }
-
+            
            
             
         } catch (error) {
@@ -232,6 +275,10 @@ btn.addEventListener("click", async (e) => {
     }
     d();
 });
+
+
+
+
 
 // var arrow = document.querySelector('.to-wrapper::after');
 // var select = document.getElementById('mySelect');

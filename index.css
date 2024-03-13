@@ -193,19 +193,22 @@ button{
   font-size: 32px;
 }
 
+
+
 .popOut {
+  
   position: absolute;
-  top: 45%; 
-  margin-left: 220px; 
+  top: 77%; 
+  margin-left: 20px; 
   z-index: 1;
   color: rgb(252, 249, 249);
   background-color: rgb(34, 31, 31);
   font-size: 40px;
-  width: auto;
-  height: auto;
+  width: 840px;
+  height: 45px;
   display: none;
   text-align: center;
-  padding: 50px;
+  padding: 16px;
   border-radius: 12px;
 }
 
